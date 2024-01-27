@@ -74,6 +74,36 @@ function espera(){
             exibirTextoNaTela('h1','chances esgotadas &#x1F921')
             exibirTextoNaTela('p', 'Tente amanhã , Será liberado novamente após 24hrs ');
             limparCampo();
-        },1000)
+        },0)
     }
 }
+
+// script para atualizaçao de pagina 
+/*
+        // Função para salvar o estado atual
+        function salvarEstado() {
+            
+            localStorage.setItem(verificarChute());
+            exibirResultado();
+        }
+
+        // Função para exibir o resultado
+        function exibirResultado() {
+           
+            var estadoAtual = localStorage.getItem("estadoAtual");
+
+            if (verificarChute()) {
+                console.log('no if')
+            } else {
+                document.getElementById('chute').setAttribute('disabled', true)
+                document.getElementById('campo').setAttribute('disabled', true)
+                exibirTextoNaTela('h1','chances esgotadas &#x1F921')
+                exibirTextoNaTela('p', 'Tente amanhã , Será liberado novamente após 24hrs ');
+                limparCampo();
+            }
+        }
+
+        // Carregar e exibir o estado ao carregar a página
+        window.onload = exibirResultado;
+
+  */
