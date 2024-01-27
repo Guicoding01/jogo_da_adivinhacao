@@ -36,7 +36,8 @@ function verificarChute() {
         }
         tentativas++;
         limparCampo();
-        armazenar
+        espera();
+        
         
     }
 
@@ -64,4 +65,15 @@ function reiniciarJogo() {
 
 /* acumulador de tentativas */
 
-
+function espera(){
+    
+    if(tentativas == 11){
+        setTimeout(()=>{
+            document.getElementById('chute').setAttribute('disabled', true)
+            document.getElementById('campo').setAttribute('disabled', true)
+            exibirTextoNaTela('h1','chances esgotadas &#x1F921')
+            exibirTextoNaTela('p', 'Tente amanhã , Será liberado novamente após 24hrs ');
+            limparCampo();
+        },1000)
+    }
+}
